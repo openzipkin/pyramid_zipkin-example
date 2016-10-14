@@ -31,7 +31,7 @@ $ python frontend.py
 $ python backend.py
 ```
 
-Next, run [Zipkin](http://zipkin.io/), which stores and queries traces reported by the browser and above services.
+Next, run [Zipkin](http://zipkin.io/), which stores and queries traces reported by and above services.
 
 ```bash
 $ java -jar zipkin.jar
@@ -42,5 +42,5 @@ $ java -jar zipkin.jar
 Once the services are started, open http://localhost:8081/
 * This will call the backend (http://localhost:9000/api) and show the result, which defaults to a formatted date.
 
-Next, you can view traces that went through the frontend via http://localhost:9411/?serviceName=frontend
+Now, you can view traces that went through the frontend via http://localhost:9411/?serviceName=frontend
 * This is a locally run zipkin service which keeps traces in memory
