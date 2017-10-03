@@ -16,6 +16,9 @@ This example has two services: frontend and backend. They both report trace data
 
 Before you start anything, you'll need to download the libraries used in this demo:
 ```bash
+# get the latest version of pyramid_zipkin
+$ pip install pyramid_zipkin -U
+# install the example
 $ python setup.py install
 ```
 
