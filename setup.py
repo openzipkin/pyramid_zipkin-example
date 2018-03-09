@@ -11,7 +11,6 @@ setup(
     url='https://github.com/openzipkin/pyramid_zipkin-example',
     description='See how much time python services spend on an http request',
     install_requires=[
-        'wsgiref',
         'pyramid',
         'requests',
         'pyramid_zipkin',
