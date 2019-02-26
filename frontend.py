@@ -2,6 +2,7 @@
 # frontend.py
 import requests
 
+from py_zipkin import Encoding
 from pyramid.config import Configurator
 from pyramid.response import Response
 from pyramid.view import view_config
@@ -22,8 +23,9 @@ def call_backend(request):
 def main():
     settings = {}
     settings['service_name'] = 'frontend'
-    settings['zipkin.transport_handler'] = http_transport
+    settings['zipkin.encoding'] = Encoding.V2_JSON
     settings['zipkin.tracing_percent'] = 100.0
+    settings['zipkin.transport_handler'] = http_transport
 
     config = Configurator(settings=settings)
     config.include('pyramid_zipkin')
